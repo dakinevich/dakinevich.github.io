@@ -1,0 +1,152 @@
+/* COLORBASE */
+
+:root {
+    --color-1: #2f2f3a;
+    --color-2: #9898d2;
+    --color-3: rgb(109, 128, 223);
+    --color-4: #dfdff6;
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 400;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 700;
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+
+/* BASE */
+
+* {
+    font-family: Roboto;
+    font-style: normal;
+    color: var(--color-4);
+}
+
+.main {
+    flex:1;
+}
+
+.header {
+    background: var(--color-1);
+    margin-top: 0;
+    padding: 10px;
+}
+
+.body {
+    background-image: url("../img/stars.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+
+}
+
+.footer{
+    background: var(--color-1);
+    margin-top: 0;
+    padding: 10px;
+}
+
+/* MAIN */
+
+.container{
+    height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-content {
+    margin-bottom: 60px;
+}
+
+.main-content-h2 {
+    display: block;
+    text-align: center;
+}
+
+.main-content-nav-ul {
+    padding-left: 0;
+    marker: none;
+    list-style-type: none;
+}
+.main-content-nav-ul li {
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--color-1);
+    border-radius: 10px;
+    margin: 10px 20%;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    transition: transform 0.3s ease; /* добавляем плавный переход */
+    
+}
+.main-content-nav-ul li:hover {
+    transform: scale(1.05);
+}
+
+a:link {
+    color: var(--color-2);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--color-2);;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-3);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--color-3);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.main-intro {
+    margin-bottom: 30px;
+}
+
+p {
+    margin: 0;
+}
+
+.contacts p{
+    color: white;
+    align-items: center;
+}
+
+.contacts {
+    width: auto;
+    display: block;
+    align-items: center;
+}
+.contacts ul{
+    marker: none;
+    list-style-type: none;
+}
+
+/* HISTORY */
+
+.history-content a{
+    margin: 20px 0;
+    font-size: large;
+    display: inline-block;
+}
+
