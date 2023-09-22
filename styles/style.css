@@ -37,6 +37,7 @@
     background: var(--color-1);
     margin-top: 0;
     padding: 10px;
+    position: relative;
 }
 
 .body {
@@ -57,7 +58,11 @@
     padding: 10px;
 }
 
-/* MAIN */
+.paragraph {
+    margin-left: 30px;
+    margin-right: 30px;
+    line-height: 30px;
+}
 
 .container{
     height: 100%;
@@ -65,13 +70,63 @@
     margin: 0 auto;
 }
 
-.main-content {
-    margin-bottom: 60px;
+/* MAIN */
+
+.header-logo-a {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    height: 50px;
+    width: 50px;
 }
+
+.header-logo-a::after {
+    content: "";
+    background-image: url("/img/favicon.ico");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    filter: invert();
+    border-radius: 10px;
+}
+
+.main-content {
+    margin: 10px 30px;
+    padding: 10px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.main-content-container {
+    border-radius: 10px;
+
+}
+
+.main-content-container:after {
+    content: "";
+    background-image: url("/img/space_x_module.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    filter: blur(1px) brightness(0.3);
+    border-radius: 10px;
+
+  }
 
 .main-content-h2 {
     display: block;
     text-align: center;
+    margin: 10px 0;
 }
 
 .main-content-nav-ul {
@@ -79,16 +134,16 @@
     marker: none;
     list-style-type: none;
 }
-.main-content-nav-ul li {
+.main-content-nav-ul-li {
     margin-left: auto;
     margin-right: auto;
-    background: var(--color-1);
-    border-radius: 10px;
-    margin: 10px 20%;
-    padding: 10px;
+    margin-bottom: 15px;
     display: block;
     text-align: center;
-    transition: transform 0.3s ease; /* добавляем плавный переход */
+    transition: transform 0.3s ease-in-out; /* добавляем плавный переход */
+    font-weight: bold;
+    font-size: large;
+
     
 }
 .main-content-nav-ul li:hover {
