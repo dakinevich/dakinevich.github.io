@@ -7,6 +7,10 @@
     --color-4: #dfdff6;
 }
 
+input, label, textarea, button, select {
+    background: transparent;
+}
+
 /* FONTS */
 
 @font-face {
@@ -48,8 +52,9 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh
-
+    min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .footer{
@@ -68,6 +73,10 @@
     height: 100%;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.anim {
+    transition: transform 0.3s ease-in-out;
 }
 
 /* MAIN */
@@ -94,6 +103,48 @@
     filter: invert();
     border-radius: 10px;
 }
+
+.header-burger {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    height: 50px;
+    width: 50px;
+    display: none;
+    z-index: 3;
+
+}
+
+.header-burger::after {
+    content: "";
+    background-image: url(/img/burger.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    filter: invert();
+    border-radius: 10px;
+}
+.header-burger{
+    
+}
+
+.burger-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--color-1);
+    z-index: 2;
+    transform: translateX(100vw);
+}
+
+
 
 .main-content {
     margin: 10px 30px;
@@ -140,7 +191,7 @@
     margin-bottom: 15px;
     display: block;
     text-align: center;
-    transition: transform 0.3s ease-in-out; /* добавляем плавный переход */
+   
     font-weight: bold;
     font-size: large;
 
@@ -203,5 +254,22 @@ p {
     margin: 20px 0;
     font-size: large;
     display: inline-block;
+}
+
+/* ADAPTIVE */ 
+
+@media (max-width: 1000px) { 
+    .header-burger {
+        display: inline;
+    }
+    .main-content {
+        display: none;
+    }
+    .burger-menu {
+    }
+  
+    .header-burger:focus + .burger-menu {
+        transform: translateY(0);
+    }
 }
 
