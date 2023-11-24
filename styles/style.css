@@ -1,10 +1,10 @@
 /* COLORBASE */
 
 :root {
-    --color-1: #2f2f3a;
-    --color-2: #9898d2;
-    --color-3: rgb(109, 128, 223);
-    --color-4: #dfdff6;
+    --color-1: #ffffff;
+    --color-2: #dadada;
+    --color-3: rgb(69, 74, 168);
+    --color-4: #a5a4a4;
 }
 
 /* FONTS */
@@ -26,20 +26,67 @@
 * {
     font-family: Roboto;
     font-style: normal;
-    color: var(--color-4);
-}
-
-.main {
-
-}
-
-.header {
-
+    padding: 0;
+    margin: 0;
+    /*outline: solid 1px red;*/
 }
 
 .body {
+    /*
+    background-image: url("../img/stars.jpg");
+    background-position: center;
+    background-size: cover;
+    */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
+.header {
+    background: var(--color-4);
+
+}
+
+.footer {
+    background: var(--color-4);
+}
+
+.main {
+    flex: 1
+}
+
+.section {
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
 }
 
 
 /* MAIN */
+
+.section-header{
+
+}
+.section-types {
+    background: var(--color-4);
+}
+.main-h1 {
+
+}
+.section-planets{
+
+}
+
+.main-h2 {
+
+}
+
+li{
+    padding: 30px;
+}
