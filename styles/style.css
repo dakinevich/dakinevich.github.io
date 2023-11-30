@@ -1,10 +1,14 @@
 /* COLORBASE */
 
 :root {
-    --color-1: #ffffff;
-    --color-2: #dadada;
-    --color-3: rgb(69, 74, 168);
-    --color-4: #a5a4a4;
+    --blank1: #ffffff;
+    --blank2: black;
+    --accent1: rgb(145, 39, 39);
+    --accent2: rgb(198, 34, 34);
+    --glass1: rgba(0, 0, 0, 0.352);
+    --glass2:rgba(145, 39, 39, 0.527);
+
+
 }
 
 /* FONTS */
@@ -21,35 +25,71 @@
     src: url(../fonts/Roboto/Roboto-Bold.ttf);
 }
 
-/* BASE */
+@font-face {
+    font-family: Montserrat;
+    font-weight: 400;
+    src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: 700;
+    src: url(../fonts/Montserrat/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Montserrat;
+    font-style: italic;
+    src: url(../fonts/Montserrat/Montserrat-Italic.ttf);
+}
 
 * {
     font-family: Roboto;
     font-style: normal;
+    font-family:"Montserrat";
+}
+
+/* ANIMATIONS */
+
+@keyframes fly {
+    0%  { left: 40%; top: 150px;}
+    100% { left: 90%; top: 200px;}
+}
+
+/* BASE */
+
+* {
     padding: 0;
     margin: 0;
-    /*outline: solid 1px red;*/
+    color: var(--blank1);
+}
+
+li{
+    list-style: none;
+}
+button{
+    background: none;
+    outline: none;
+    border: none;
+}
+a{
+    text-decoration: none;
 }
 
 .body {
     /*
-    background-image: url("../img/stars.jpg");
+    background-image: url("../img/stars8k.png");
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     */
+    background: var(--blank2);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-
-.header {
-    background: var(--color-4);
-
+.body::-webkit-scrollbar {
+    display: none;
 }
 
-.footer {
-    background: var(--color-4);
-}
 
 .main {
     flex: 1
@@ -60,33 +100,189 @@
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
+    height: 100%;
+    max-width: 700px;
     margin: 0 auto;
-    align-items: center;
+}
+/* HEADER */
+
+.header {
+    background: var(--glass1);
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    overflow: hidden;
+    
+}
+.header__p {
+    text-align: center;
+    line-height: 70px;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-
-/* MAIN */
+/* SECTION HEADER */
 
 .section-header{
-
-}
-.section-types {
-    background: var(--color-4);
-}
-.main-h1 {
-
-}
-.section-planets{
-
-}
-
-.main-h2 {
+    background: var(--blank2);
+    height: 100vh;
+    background: url("../img/moon.jpg");
+    background-size: cover;
+    background-position: center 0;
+    position: relative;
+    perspective: 1px;
+    
 
 }
 
-li{
-    padding: 30px;
+/*.section-header::before {
+    content: "";
+    position: absolute;
+    top: 200px; left: 200px;
+    width: 100px; height: 100px;
+    background-image: url("../img/earth.png");
+    background-size: cover;
+    animation: fly 60s linear 0s infinite;
+    filter: brightness(0.8);
+}*/
+
+.section-header__h{
+    top: 25vh;
+    right: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 3em;
+    color: var(--blank1);
+    mix-blend-mode:difference;
+    filter:contrast(0.1);
+}
+
+.section-header__list{
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+.section-header__li{
+    display: flex;
+    flex-basis: 50%;
+    height: 60px;
+    width: 100%;
+    
+}
+.section-header__btn{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.146);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+
+.section-header__btn:hover{
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.367);
+
+}
+.section-header__btn:focus{
+    background: rgba(130, 36, 36, 0.34);
+}
+.btn-selected {
+    background: rgba(255, 255, 255, 0.366);
+}
+
+
+
+
+
+/* SECTION CARDS */
+
+.section-cards{
+    padding: 100px 0;
+    background: var(--blank2);
+}
+.section-cards__h {
+    color: var(--accent1);
+    font-size: 3em;
+    margin-bottom: 100px;
+    width: 100%;
+    text-align: center;
+}
+.section-cards__cards{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    }
+
+.voyager{
+    background: url("../img/voyager2.jpg");
+
+}
+.oportunity {
+    background: url("../img/oportunity.jpg");
+
+}
+.iss {
+    background: url("../img/iss.jpg");
+}
+.shuttle{
+    background: url("../img/shuttle.jpg");
+}
+.section-cards__card{
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.section-cards__a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.section-cards__card-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    background: rgba(157, 157, 157, 0.353);
+    transform: translateY(240px);
+    transition: transform ease-in-out 0.4s;
+}
+
+.section-cards__name{
+    line-height: 60px;
+    font-size:larger;
+}
+.section-cards__text{
+    padding: 20px;
+}
+.section-cards__card:hover .section-cards__card-content{
+    transform: translateY(0);
+
+}
+
+
+/* FOOTER */
+
+.footer {
+    height: 100px;
+    background: var(--accent1);
 }
