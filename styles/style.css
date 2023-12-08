@@ -189,6 +189,8 @@ img{
 }
 .section-header__btn{
     width: 100%;
+    text-align: center;
+    line-height: 60px;
     background: rgba(255, 255, 255, 0.146);
     backdrop-filter: blur(2px);
     border-radius: 10px;
@@ -283,7 +285,35 @@ img{
 
 }
 
+/*  TIMELINE  */
+.section-timeline {
+    padding: 100px 0;
+    background: var(--blank2);
 
+}
+.section-timeline__h {
+    color: var(--accent1);
+    font-size: var(--size4);
+    margin-bottom: 100px;
+    width: 100%;
+    text-align: center;
+
+}
+
+/* PLANETS */
+.section-planets{
+    padding: 100px 0;
+    background: var(--blank2);
+
+}
+.section-planets__h{
+    color: var(--accent1);
+    font-size: var(--size4);
+    margin-bottom: 100px;
+    width: 100%;
+    text-align: center;
+    
+}
 /* FOOTER */
 
 .footer {
