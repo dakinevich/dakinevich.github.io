@@ -330,7 +330,6 @@ img{
 /* APPARAT */
 
 .apparat-section {
-    visibility: hidden;
     position: fixed;
     inset: 0;
     z-index: 4;
@@ -367,4 +366,126 @@ img{
 }
 .apparat-section img{
     max-height: 40vh;
+}
+/* TIMELINE */
+.section-timeline{
+}
+.section-timeline__grup-header{
+    display: flex;
+    cursor: pointer;
+    width: max-content;
+}
+.section-timeline__grup-element-img{
+
+    transition: transform ease-in-out .3s;
+
+}
+.section-timeline__grup-element-p{
+    border-bottom: 2px solid var(--blank2);
+    transition: border ease-in-out .2s;
+
+
+}
+.section-timeline__grup-header:hover .section-timeline__grup-element-p{
+    border-bottom: 2px solid var(--blank1);
+}
+
+
+.section-timeline__grup-element{
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: var(--size3);
+
+}
+
+
+.section-timeline__element{
+    position: relative;
+    padding-top: calc(20px + 0.27em);
+    padding-bottom: 20px;
+    display: none;
+}
+
+.section-timeline__element-p{
+    font-size: var(--size1);
+
+}
+.section-timeline__element-content{
+    display: flex;
+
+    margin-top: 30px;
+
+}
+.section-timeline__element-content-left{
+    align-self: center;
+
+    margin-right: 20px;
+}
+.section-timeline__element-content-img{
+    width: 200px;
+
+}
+.section-timeline__element-name{
+    margin-bottom: 10px;
+}
+.section-timeline__element-text{
+    font-size: var(--size1);
+}
+.section-timeline__element-content-right{
+    max-width: 30vw;
+}
+
+.timeline-decor::after{
+    
+    position: absolute;
+    content: "";
+    left: -20px;
+    top: calc(20px + 0.42em);
+    width: 10px;
+    height: 10px;
+    background: black;
+    outline: solid 2px white;
+    border-radius: 100%;
+    z-index: 1;
+}
+.timeline-decor:first-child:before{
+    position: absolute;
+    content: "";
+    left: -16px;
+    top: calc(20px + 0.42em);
+    bottom: 0;
+    width: 2px;
+    background: white;
+}
+.timeline-decor::before{
+    position: absolute;
+    content: "";
+    left: -16px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: white;
+}
+.timeline-decor:last-child::before{
+    position: absolute;
+    content: "";
+    left: -16px;
+    top: -30px;
+    bottom: calc(100% - 30px - 0.42em);
+    width: 2px;
+    background: white;
+}
+
+/* PLANETS */
+.section-planets__cards{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.section-planets__card{
+
+}
+.section-planets__card-h{
+    text-align: center;
 }
