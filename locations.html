@@ -39,47 +39,54 @@
         <section class="section section-planets">
         
             <h2 class="section-planets__h">Планеты и спутники</h2>
-            <div class="container">
                 <div class="section-planets__cards">
-                    <div class="section-planets__card">
-                        <img src="img/earth.png" alt="">
+                    <div class="section-planets__buffer">
+                    </div>
+                    <div class="section-planets__card planet-selected" onclick="on_planet_click(this, 'earth')">
+                        <img class="section-planets__card_img" src="img/earth.png" alt="">
                         <h2 class="section-planets__card-h">Земля</h2>
                     </div>
-                    <div class="section-planets__card">
-                        <img src="img/moon.png" alt="">
+                    <div class="section-planets__card" onclick="on_planet_click(this, 'moon')">
+                        <img class="section-planets__card_img" src="img/moon.png" alt="">
                         <h2 class="section-planets__card-h">Луна</h2>
                     </div>
-                    <div class="section-planets__card">
-                        <img src="img/mars.png" alt="">
+                    <div class="section-planets__card" onclick="on_planet_click(this, 'mars')">
+                        <img class="section-planets__card_img" src="img/mars.png" alt="">
                         <h2 class="section-planets__card-h">Марс</h2>
                     </div>
-                    <div class="section-planets__card">
-                        <img src="img/upiter.png" alt="">
+                    <div class="section-planets__card" onclick="on_planet_click(this, 'jupiter')">
+                        <img class="section-planets__card_img" src="img/upiter.png" alt="">
                         <h2 class="section-planets__card-h">Юпитер</h2>
+                    </div>
+                    <div class="section-planets__card" onclick="on_planet_click(this, 'venus')">
+                        <img class="section-planets__card_img" src="img/venus.png" alt="">
+                        <h2 class="section-planets__card-h">Венера</h2>
+                    </div>
+                    <div class="section-planets__card" onclick="on_planet_click(this, 'neptun')">
+                        <img class="section-planets__card_img" src="img/neptun.png" alt="">
+                        <h2 class="section-planets__card-h">Нептун</h2>
                     </div>
 
-                    <div class="section-planets__card">
-                        <img src="img/earth.png" alt="">
-                        <h2 class="section-planets__card-h">Земля</h2>
-                    </div>
-                    <div class="section-planets__card">
-                        <img src="img/moon.png" alt="">
-                        <h2 class="section-planets__card-h">Луна</h2>
-                    </div>
-                    <div class="section-planets__card">
-                        <img src="img/mars.png" alt="">
-                        <h2 class="section-planets__card-h">Марс</h2>
-                    </div>
-                    <div class="section-planets__card">
-                        <img src="img/upiter.png" alt="">
-                        <h2 class="section-planets__card-h">Юпитер</h2>
-                    </div>
+                   
+                    <div class="section-planets__buffer">
                 </div>
-
+        </section>
+        <section class="section section-cards">
+            <div class="container">
+                <ul class="section-cards__cards">
+                    <!--
+                    <li class="section-cards__card">
+                        <a href="/card.html?cardId=1" class="section-cards__card-content">
+                            <h3 class="section-cards__name">Voyager 2</h3>
+                            <p class="section-cards__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias exercitationem facilis eligendi corrupti sapiente ab aperiam. Quod in rem ex vero cupiditate reprehenderit iure nostrum maxime qui quo! Rerum, neque.</p>
+                        </a>
+                    </li>
+                -->
+                   
+                    
+                </ul>
             </div>
         </section>
-        
-
 
     </main>
     <footer class="footer">
@@ -91,6 +98,6 @@
 
    <script src="scripts/moon_move.js"></script>
     
-   <script src="scripts/script.js"></script>
+   <script src="scripts/locations.js"></script>
 </body>
 </html>
