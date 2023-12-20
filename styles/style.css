@@ -300,6 +300,8 @@ img{
 .section-planets{
     padding: 100px 0;
     background: var(--blank2);
+    overflow-x: hidden;
+    overflow-y: hidden;
 
 }
 .section-planets__h{
